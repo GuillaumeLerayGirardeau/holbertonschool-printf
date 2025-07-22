@@ -4,8 +4,12 @@ int print_c(va_list args)
 {
 	char arg = va_arg(args, int);
 
-	_putchar(arg);
+	if (arg == '\0')
+	{
+		return (0);
+	}
 
+	_putchar(arg);
 	return (1);
 }
 

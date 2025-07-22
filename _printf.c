@@ -11,6 +11,9 @@ int _printf(const char *format, ...)
 		{"i", print_di},
 	};
 	int i = 0;
+	int count = 0;
+	int check_format = 0;
+	int found = 0;
 	int j;
 
 	va_start (args, format);
@@ -22,27 +25,39 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '%')
 			{
 				_putchar('%');
+				found = 1;
+				count++;
 			}
-
-			j = 0;
-
-			while (j < 5)
+			else
 			{
-				if (format[i + 1] == *spec[j].identifier)
+				j = 0;
+
+				while (j < 4)
 				{
-					spec[j].f(args);
-					i++;
+					if (format[i + 1] == *spec[j].identifier)
+					{
+						count += spec[j].f(args);
+						found = 1;
+						i++;
+					}
+					check_format++;
+					if (check_format == 4 && found != 1)
+					{
+						_putchar(format[i]);
+						count++;
+					}
+					j++;
 				}
-				j++;
 			}
 		}
 		else
 		{
 			_putchar(format[i]);
+			count++;
 		}
 		i++;
 	}
 	va_end (args);
 
-	return (i);
+	return (count);
 }
