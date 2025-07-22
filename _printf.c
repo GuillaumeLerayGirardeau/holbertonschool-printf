@@ -6,6 +6,7 @@ int _printf(const char *format, ...)
 	int i = 0, count = 0, x;
 
 	va_start(args, format);
+
 	for (; format != NULL && format[i]; i++)
 	{
 		if (format[i] == '%')

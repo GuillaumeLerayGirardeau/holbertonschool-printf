@@ -17,8 +17,20 @@ int print_s(va_list args)
 {
 	int i = 0;
 	int j = 0;
+	int a = 0;
+	char *nul = "(null)";
 
 	char *arg = va_arg(args, char*);
+
+	if (arg == NULL)
+	{
+		while (nul[a])
+		{
+			_putchar(nul[a]);
+			a++;
+		}
+		return (6);
+	}
 
 	while(arg[j])
 	{
