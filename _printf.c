@@ -15,16 +15,14 @@ int _printf(const char *format, ...)
 			x = check_structure(format, i, args);
 			if (x == 0)
 			{
-				_putchar(format[i - 1]);
-				_putchar(format[i]);
-				count += 2;
+				count += _putchar(format[i - 1]);
+				count += _putchar(format[i]);
 			}
 			count += x;
 		}
 		else
 		{
-			_putchar(format[i]);
-			count++;
+			count += _putchar(format[i]);
 		}
 	}
 	va_end(args);

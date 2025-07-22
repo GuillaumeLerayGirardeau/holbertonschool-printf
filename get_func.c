@@ -32,6 +32,11 @@ int print_s(va_list args)
 		return (6);
 	}
 
+	if (*arg == '\0')
+	{
+		return (0);
+	}
+
 	while(arg[j])
 	{
 		_putchar(arg[j]);
