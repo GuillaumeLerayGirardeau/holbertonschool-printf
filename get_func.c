@@ -1,6 +1,15 @@
 #include "main.h"
 
-int print_cs(va_list args)
+int print_c(va_list args)
+{
+	char arg = va_arg(args, int);
+
+	_putchar(arg);
+
+	return (1);
+}
+
+int print_s(va_list args)
 {
 	int i = 0;
 	int j = 0;
@@ -16,26 +25,9 @@ int print_cs(va_list args)
 	return (i);
 }
 
-int print_prc(void)
-{
-	_putchar('%');
-	return (1);
-}
-
 int print_di(va_list args)
 {
 	int i = 0;
-	/*int j = 0;
-
-	int *arg = va_arg(args, int*);
-
-	while(arg[j])
-	{
-		_putchar(arg[j] % 10 + '0');
-		i++;
-		j++;
-	}*/
-
 	int number = va_arg(args, int);
 	int modulo = 10;
 	int a;
@@ -61,6 +53,7 @@ int print_di(va_list args)
 		_putchar(a + '0');
 		c %= modulo;
 		modulo /= 10;
+		i++;
 	}
 
 	return (i);

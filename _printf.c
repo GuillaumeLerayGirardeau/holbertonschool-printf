@@ -5,9 +5,8 @@ int _printf(const char *format, ...)
 	va_list args;
 	f_spe spec[] =
 	{
-		{"c", print_cs},
-		{"s", print_cs},
-		/*{"%", print_prc},*/
+		{"c", print_c},
+		{"s", print_s},
 		{"d", print_di},
 		{"i", print_di},
 	};
@@ -20,12 +19,13 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i +1] == '%')
+			if (format[i + 1] == '%')
 			{
 				_putchar('%');
 			}
 
 			j = 0;
+
 			while (j < 5)
 			{
 				if (format[i + 1] == *spec[j].identifier)

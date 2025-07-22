@@ -10,8 +10,8 @@ int _strlen(char *a);
 char _putchar(char c);
 int _printf(const char *format, ...);
 
-int print_cs(va_list args);
-int print_prc(void);
+int print_c(va_list args);
+int print_s(va_list args);
 int print_di(va_list args);
 
 typedef struct format_specifier
