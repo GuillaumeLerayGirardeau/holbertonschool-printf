@@ -10,6 +10,8 @@ int _strlen(char *a);
 char _putchar(char c);
 int _printf(const char *format, ...);
 
+int check_structure (const char *format, int i, va_list args);
+
 int print_c(va_list args);
 int print_s(va_list args);
 int print_di(va_list args);

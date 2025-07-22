@@ -62,3 +62,31 @@ int print_di(va_list args)
 
 	return (i);
 }
+
+int check_structure (const char *format, int i, va_list args)
+{
+	int count = 0;
+	int j;
+	f_spe spec[] = {
+		{"c", print_c},
+		{"s", print_s},
+		{"d", print_di},
+		{"i", print_di},
+	};
+
+	if (format[i] == '%')
+	{
+		_putchar('%');
+		count++;
+	}
+
+	for (j = 0; j < 4; j++)
+	{
+		if (format[i] == *spec[j].identifier)
+		{
+			count += spec[j].f(args);
+		}
+	}
+
+	return (count);
+}
