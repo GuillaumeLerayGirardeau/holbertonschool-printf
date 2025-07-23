@@ -13,10 +13,7 @@ int print_c(va_list args)
 {
 	char arg = va_arg(args, int);
 
-	if (arg != '\0')
-	{
-		_putchar(arg);
-	}
+	_putchar(arg);
 	return (1);
 }
 
