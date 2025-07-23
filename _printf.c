@@ -17,9 +17,13 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	for (; format != NULL && format[i]; i++)
+	if (format == NULL)
 	{
-		if (format[i] == '%')
+		return (-1);
+	}
+	for (; format[i]; i++)
+	{
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
 			x = check_structure(format, i, args);
@@ -33,6 +37,10 @@ int _printf(const char *format, ...)
 				count += 1;
 			}
 			count += x;
+		}
+		else if (format[i] == '%' && format[i + 1] == '\0')
+		{
+			return (-1);
 		}
 		else
 		{
