@@ -1,5 +1,14 @@
 #include "main.h"
 
+/**
+ * print_c - this function is about print a character
+ * @args: the argument to print
+ *
+ * this function is call when a character specifier is identify by the function
+ * check_structure.
+ * Return: the amont of character print
+ */
+
 int print_c(va_list args)
 {
 	char arg = va_arg(args, int);
@@ -13,9 +22,18 @@ int print_c(va_list args)
 	return (1);
 }
 
+/**
+ * print_s - this function is about print a string
+ * @args: the argument to print
+ *
+ * this function is call when a character specifier is identify by the function
+ * check_structure.
+ * Return: the amont of character print
+ */
+
 int print_s(va_list args)
 {
-	int i = 0;
+	int count = 0;
 	int j = 0;
 	int a = 0;
 	char *nul = "(null)";
@@ -37,18 +55,27 @@ int print_s(va_list args)
 		return (0);
 	}
 
-	while(arg[j])
+	while (arg[j])
 	{
 		_putchar(arg[j]);
 		j++;
-		i++;
+		count++;
 	}
-	return (i);
+	return (count);
 }
+
+/**
+ * print_di - this function is about print numbers
+ * @args: the argument to print
+ *
+ * this function is call when a digit or an integer specifier is identify
+ * by the function check_structure.
+ * Return: the amont of character print
+ */
 
 int print_di(va_list args)
 {
-	int i = 0;
+	int count = 0;
 	int number = va_arg(args, int);
 	int modulo = 10;
 	int a;
@@ -58,7 +85,7 @@ int print_di(va_list args)
 	{
 		_putchar('-');
 		number *= -1;
-		i++;
+		count++;
 	}
 
 	c = number;
@@ -74,13 +101,25 @@ int print_di(va_list args)
 		_putchar(a + '0');
 		c %= modulo;
 		modulo /= 10;
-		i++;
+		count++;
 	}
 
-	return (i);
+	return (count);
 }
 
-int check_structure (const char *format, int i, va_list args)
+/**
+ * check_structure - this function identify the conversion specifier and call
+ * the function assiciate to print an argument
+ * @args: the argument to print
+ * @format: the string of argument
+ * @i: the emplacement of the convertion specifier to identify
+ *
+ * this function call a function when it identify the convertion
+ * specifier associate.
+ * Return: the amont of character print
+ */
+
+int check_structure(const char *format, int i, va_list args)
 {
 	int count = 0;
 	int j;
