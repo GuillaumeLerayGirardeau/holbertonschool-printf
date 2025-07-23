@@ -76,9 +76,9 @@ int print_s(va_list args)
 int print_di(va_list args)
 {
 	int count = 0;
-	int number = va_arg(args, int);
-	int modulo = 10;
-	int a, c;
+	long number = va_arg(args, int);
+	long modulo = 10;
+	long a, c;
 
 	if (number < 0)
 	{
