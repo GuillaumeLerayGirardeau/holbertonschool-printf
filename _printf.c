@@ -28,6 +28,10 @@ int _printf(const char *format, ...)
 				count += _putchar(format[i - 1]);
 				count += _putchar(format[i]);
 			}
+			else if (x == -1)
+			{
+				count += 1;
+			}
 			count += x;
 		}
 		else

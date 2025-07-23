@@ -52,7 +52,7 @@ int print_s(va_list args)
 
 	if (*arg == '\0')
 	{
-		return (0);
+		return (-1);
 	}
 
 	while (arg[j])
