@@ -26,8 +26,8 @@ int print_rot(va_list args)
 		return (6);
 	}
 
-	if (str[i] == '\0')
-		return (1);
+	if (*str == '\0')
+		return (-1);
 
 	while (str[i])
 	{
