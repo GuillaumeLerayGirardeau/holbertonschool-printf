@@ -42,7 +42,7 @@ int print_rot(va_list args)
 		}
 		else
 		{
-			return (-1);
+			_putchar(str[i]);
 		}
 		i++;
 		count++;
