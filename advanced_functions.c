@@ -11,9 +11,7 @@
 
 int print_rot(va_list args)
 {
-	int i = 0;
-	int y = 0;
-	int count = 0;
+	int i = 0, y = 0, count = 0;
 	char *nul = "(null)";
 
 	char *str = va_arg(args, char*);
@@ -27,6 +25,9 @@ int print_rot(va_list args)
 		}
 		return (6);
 	}
+
+	if (str[i] == '\0')
+		return (1);
 
 	while (str[i])
 	{
