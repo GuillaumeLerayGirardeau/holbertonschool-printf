@@ -1,31 +1,49 @@
 
 # _PRINTF
 
-This function is used to print a variety of outputs in the standard output, such as characters, strings, digits and integers. 
+This function is used to print a variety of outputs in the standard output. 
 It is a rewriting of the **printf** fucntion available in the **stdio library**.
 
+<ins>**Accepted specifiers :**</ins>
 
-## Usage/Examples
+| Specifiers  | Description |
+| ------------- | ------------- |
+| c | print a char |
+| s | print a string |
+| d | print a digit |
+| i | print an integer |
+
+## Man Page
+
+You may execute this command to access the man page of _printf :
+
+````
+man ./man_3_printf
+````
+
+## Usage/Example
 
 ```
-_printf("Hello, my name is %s and I am %d years old", John, 50)
+_printf("Hello, my name is %s and I am %d years old", "John", 50);
 
 Hello, my name is John and I am 50 years old
 ```
 
 In this example, %s and %d will looks respectively for a string and a digit in the arguments, and will print them in their place. 
 
-## Compiling command
+## Compiling Command
+
+You may compile all files into an executable using GNU Compiler Collection (gcc).
 
 ```
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o _printf
 ```
 ## Requirements
 
 - All your files might be compiled on **Ubuntu 20.04 LTS** using gcc
 - All your files should end with a **new line**
 
-## Coding style
+## Coding Style
 
 This fucntion was coded using the **Betty** coding style. 
 
@@ -33,20 +51,33 @@ This fucntion was coded using the **Betty** coding style.
 
 <img width="719" height="575" alt="flowchart_printf_720" src="https://github.com/user-attachments/assets/685cb9b8-b2c1-4855-be64-40d948f74db0" />
 
+
 ## Tests
 
-The following code was used to test the _printf function :
+The following code was used to test the _printf function (you can run it by compiling it with the function into a main.c file) :
 
-- len = _printf("Let's try to printf a simple sentence.\n");
-- ui = (unsigned int)INT_MAX + 1024;
-- addr = (void *)0x7ffe637541f0;
-- _printf("Length:[%d, %i]\n", len, len);
-- _printf("Negative:[%d]\n", -762534);
-- _printf("Character:[%c]\n", 'H');
-- _printf("String:[%s]\n", "I am a string !");
-- len = _printf("Percent:[%%]\n");
-- _printf("Len:[%d]\n", len);
-- _printf("Unknown:[%r]\n");
+````
+#include <limits.h>
+#include <stdio.h>
+#include "main.h"
+
+int main(void)
+{
+    int len;
+
+len = _printf("Let's try to printf a simple sentence.\n");
+ui = (unsigned int)INT_MAX + 1024;
+addr = (void *)0x7ffe637541f0;
+_printf("Length:[%d, %i]\n", len, len);
+_printf("Negative:[%d]\n", -762534);
+_printf("Character:[%c]\n", 'H');
+_printf("String:[%s]\n", "I am a string !");
+len = _printf("Percent:[%%]\n");
+_printf("Len:[%d]\n", len);
+_printf("Unknown:[%r]\n");
+    return (0);
+}
+````
 
 
 ## Authors
