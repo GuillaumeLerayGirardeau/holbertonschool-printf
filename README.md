@@ -1,7 +1,7 @@
 
 # _PRINTF
 
-This function is used to print a variety of outputs in the standard output, such as characters, strings and integers. 
+This function is used to print a variety of outputs in the standard output, such as characters, strings, digits and integers. 
 It is a rewriting of the **printf** fucntion available in the **stdio library**.
 
 
@@ -13,7 +13,7 @@ _printf("Hello, my name is %s and I am %d years old", John, 50)
 Hello, my name is John and I am 50 years old
 ```
 
-In this example, %s and %d will looks respectively for a string and a integer in the arguments, and will print them in their place. 
+In this example, %s and %d will looks respectively for a string and a digit in the arguments, and will print them in their place. 
 
 ## Compiling command
 
@@ -42,12 +42,8 @@ The following code was used to test the _printf function :
 - addr = (void *)0x7ffe637541f0;
 - _printf("Length:[%d, %i]\n", len, len);
 - _printf("Negative:[%d]\n", -762534);
-- _printf("Unsigned:[%u]\n", ui);
-- _printf("Unsigned octal:[%o]\n", ui);
-- _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 - _printf("Character:[%c]\n", 'H');
 - _printf("String:[%s]\n", "I am a string !");
-- _printf("Address:[%p]\n", addr);
 - len = _printf("Percent:[%%]\n");
 - _printf("Len:[%d]\n", len);
 - _printf("Unknown:[%r]\n");
