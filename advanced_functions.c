@@ -60,7 +60,7 @@ int print_rev(va_list args)
 
 	if (*arg == '\0')
 	{
-		return (0);
+		return (-1);
 	}
 	else
 	{
