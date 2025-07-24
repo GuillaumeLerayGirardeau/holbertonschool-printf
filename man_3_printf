@@ -23,6 +23,12 @@ _printf produces output according to a format similar to the printf() function.
 -%i- print an integer
 -%%- print a single %
 .RE
+.SH RETURN VALUE
+
+.PP
+
+the value return by the function is the amont of character
+that the function print and if it's NULL the function return -1
 
 .SH EXEMPLES
 
@@ -49,7 +55,7 @@ _printf("Percent:[%%]\n")
 .PP
 output : Percent:[%]
 .PP
-_printf("Negative:[%i]\n", 59)
+_printf("Negative:[%i]\n", 58)
 .PP
 output : Negative:[58]
 .PP
