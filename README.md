@@ -6,12 +6,13 @@ It is a rewriting of the **printf** fucntion available in the **stdio library**.
 
 <ins>**Accepted specifiers :**</ins>
 
-| Specifiers  | Description |
-| ------------- | ------------- |
+| Specifiers | Description |
+| :---: | :---: |
 | c | print a char |
 | s | print a string |
 | d | print a digit |
 | i | print an integer |
+| % | print % |
 
 ## Man Page
 
@@ -23,13 +24,22 @@ man ./man_3_printf
 
 ## Usage/Example
 
+- **Print a sentence with specifiers**
 ```
-_printf("Hello, my name is %s and I am %d years old", "John", 50);
+_printf("Hello, my name is %s and %c am %d years old", "John", 'I', 50);
 
 Hello, my name is John and I am 50 years old
 ```
+*In this example, %s, %c %d will looks respectively for a string, a character and a digit in the arguments, and will print them in their place.*
 
-In this example, %s and %d will looks respectively for a string and a digit in the arguments, and will print them in their place. 
+- **Print a sentence with %**
+
+````
+_printf("This is how to print a %%");
+
+This is how to print a %
+````
+*In this example, the specifier %% will print a single %.*
 
 ## Compiling Command
 
@@ -66,8 +76,6 @@ int main(void)
     int len;
 
 len = _printf("Let's try to printf a simple sentence.\n");
-ui = (unsigned int)INT_MAX + 1024;
-addr = (void *)0x7ffe637541f0;
 _printf("Length:[%d, %i]\n", len, len);
 _printf("Negative:[%d]\n", -762534);
 _printf("Character:[%c]\n", 'H');
