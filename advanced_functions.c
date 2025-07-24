@@ -52,7 +52,12 @@ int print_rot(va_list args)
 	return (count);
 }
 
-
+/**
+ * print_rev - print a string in reverse
+ * @args: the string to print in reverse
+ *
+ * Return: the number of character print
+ */
 int print_rev(va_list args)
 {
 	int c = 0, count = 0;
