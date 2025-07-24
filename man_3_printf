@@ -22,6 +22,8 @@ _printf produces output according to a format similar to the printf() function.
 -%d- print a digit
 -%i- print an integer
 -%%- print a single %
+-%r- print a string in reverse
+-%R- print a string in ROT13
 .RE
 .SH RETURN VALUE
 

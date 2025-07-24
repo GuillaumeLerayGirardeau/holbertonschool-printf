@@ -13,6 +13,8 @@ It is a rewriting of the **printf** fucntion available in the **stdio library**.
 | d | print a digit |
 | i | print an integer |
 | % | print % |
+| r | print a string in reverse |
+| R | print a string in ROT13 |
 
 ## Man Page
 
