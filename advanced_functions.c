@@ -51,3 +51,27 @@ int print_rot(va_list args)
 	}
 	return (count);
 }
+
+
+int print_rev(va_list args)
+{
+	int c = 0, count = 0;
+	char *arg = va_arg(args, char*);
+
+	if (*arg == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		while (arg[c])
+		{
+			c++;
+		}
+		for (c -= 1; c >= 0; c--)
+		{
+			count += _putchar(arg[c]);
+		}
+		return (count);
+	}
+}

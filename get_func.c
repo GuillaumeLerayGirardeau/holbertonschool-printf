@@ -126,6 +126,7 @@ int check_structure(const char *format, int i, va_list args)
 		{"d", print_di},
 		{"i", print_di},
 		{"R", print_rot},
+		{"r", print_rev},
 	};
 
 	if (format[i] == '%')
@@ -134,7 +135,7 @@ int check_structure(const char *format, int i, va_list args)
 		count++;
 	}
 
-	for (j = 0; j < 5; j++)
+	for (j = 0; j < 6; j++)
 	{
 		if (format[i] == *spec[j].identifier)
 		{

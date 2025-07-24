@@ -18,6 +18,7 @@ int print_s(va_list args);
 int print_di(va_list args);
 
 int print_rot(va_list args);
+int print_rev(va_list args);
 
 /**
  * struct format_specifier - identify the type of conversion specifier
