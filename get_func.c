@@ -110,9 +110,9 @@ int print_di(va_list args)
  * the function associated to print an argument
  * @args: the argument to print
  * @format: the string of argument
- * @i: the emplacement of the convertion specifier to identify
+ * @i: the emplacement of the conversion specifier to identify
  *
- * this function call a function when it identify the convertion
+ * this function call a function when it identify the conversion
  * specifier associated.
  * Return: the amount of characters printed
  */

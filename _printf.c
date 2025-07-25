@@ -4,7 +4,7 @@
  * _printf - this function produces output according to a format.
  * @format: the format to produce output according to
  *
- * this function uses convertion specifier to add variable
+ * this function uses conversion specifier to add variable
  * in the string to print (%d, %s, ...) a function call is used to identify
  * the correct specifier. The fonction calls another function associated
  * to the specifier that will print in the correct format.

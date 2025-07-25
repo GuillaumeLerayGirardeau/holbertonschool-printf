@@ -25,9 +25,9 @@ int print_rev(va_list args);
  * @identifier: Pointer to a string representing the format specifier
  * @f: Function pointer to the handler that takes a va_list and returns an int
  *
- * this structure is used to identify the type of convertion specifier
- * and call a fonction that is associate to it. the fonction associate will
- * know how to handle and print that type of argument.
+ * this structure is used to identify the type of conversion specifier
+ * and call a fonction that is associate to it. The fonction associated will
+ * know how to handle it and print that type of argument.
  */
 typedef struct format_specifier
 {
