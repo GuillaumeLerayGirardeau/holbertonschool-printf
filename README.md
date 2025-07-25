@@ -61,8 +61,7 @@ This fucntion was coded using the **Betty** coding style.
 
 ## Flowchart
 
-<img width="719" height="575" alt="flowchart_printf_720" src="https://github.com/user-attachments/assets/685cb9b8-b2c1-4855-be64-40d948f74db0" />
-
+<img width="1280" height="1023" alt="flowchart printf" src="https://github.com/user-attachments/assets/ebf1547c-4ceb-407b-8e90-4e8d719814f5" />
 
 ## Tests
 
