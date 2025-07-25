@@ -6,7 +6,7 @@
  *
  * this function is call when a character specifier is identified by
  * the function check_structure.
- * Return: the amont of characters printed
+ * Return: the amount of characters printed
  */
 
 int print_c(va_list args)
@@ -23,7 +23,7 @@ int print_c(va_list args)
  *
  * this function is call when a character specifier is identified by
  * the function check_structure.
- * Return: the amont of characters printed
+ * Return: the amount of characters printed
  */
 
 int print_s(va_list args)
@@ -65,7 +65,7 @@ int print_s(va_list args)
  *
  * this function is call when a digit or an integer specifier is identified
  * by the function check_structure.
- * Return: the amont of characters printed
+ * Return: the amount of characters printed
  */
 
 int print_di(va_list args)
@@ -114,7 +114,7 @@ int print_di(va_list args)
  *
  * this function call a function when it identify the convertion
  * specifier associated.
- * Return: the amont of characters printed
+ * Return: the amount of characters printed
  */
 
 int check_structure(const char *format, int i, va_list args)

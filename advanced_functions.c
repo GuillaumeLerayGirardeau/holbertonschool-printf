@@ -6,7 +6,7 @@
  *
  * this function is call when a character specifier is identified by
  * the function check_structure.
- * Return: the amont of characters printed
+ * Return: the amount of characters printed
  */
 
 int print_rot(va_list args)
@@ -56,7 +56,7 @@ int print_rot(va_list args)
  * print_rev - print a string in reverse
  * @args: the string to print in reverse
  *
- * Return: the number of characters printed
+ * Return: the amount of characters printed
  */
 int print_rev(va_list args)
 {

@@ -8,7 +8,7 @@
  * in the string to print (%d, %s, ...) a function call is used to identify
  * the correct specifier. The fonction call another function associated
  * to the specifier that will print in the correct format.
- * Return: the number of characters printed
+ * Return: the amount of characters printed
  */
 int _printf(const char *format, ...)
 {
