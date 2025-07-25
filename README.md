@@ -73,7 +73,7 @@ The following code was used to test the _printf function (you can run it by comp
 #include <stdio.h>
 #include "main.h"
 
-**
+/**
  * main - Entry point
  *
  * Return: Always 0
