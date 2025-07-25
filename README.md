@@ -1,7 +1,7 @@
 
 # _PRINTF
 
-This function is used to print a variety of outputs in the standard output. 
+This function is used to print a variety of outputs in the standard output.
 It is a rewriting of the **printf** fucntion available in the **stdio library**.
 
 <ins>**Accepted specifiers :**</ins>
@@ -57,7 +57,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o _printf
 
 ## Coding Style
 
-This fucntion was coded using the **Betty** coding style. 
+This fucntion was coded using the **Betty** coding style.
 
 ## Flowchart
 
@@ -72,6 +72,12 @@ The following code was used to test the _printf function (you can run it by comp
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
+
+**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
 
 int main(void)
 {
