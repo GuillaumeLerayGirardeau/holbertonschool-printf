@@ -5,10 +5,10 @@
  * @format: the format to produce output according to
  *
  * this function use convertion specifier to add variable
- * in the string to print (%d, %s, ...) a function call is use to identify
- * the correct specifier. The fonction call another function associate
+ * in the string to print (%d, %s, ...) a function call is used to identify
+ * the correct specifier. The fonction call another function associated
  * to the specifier that will print in the correct format.
- * Return: the number of character print
+ * Return: the number of characters printed
  */
 int _printf(const char *format, ...)
 {
