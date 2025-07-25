@@ -4,9 +4,9 @@
  * print_rot - this function prints a string in ROT13
  * @args: the argument to print
  *
- * this function is call when a character specifier is identify by the function
- * check_structure.
- * Return: the amont of character print
+ * this function is call when a character specifier is identified by
+ * the function check_structure.
+ * Return: the amont of characters printed
  */
 
 int print_rot(va_list args)
@@ -20,10 +20,10 @@ int print_rot(va_list args)
 	{
 		while (nul[y])
 		{
-			_putchar(nul[y]);
+			count += _putchar(nul[y]);
 			y++;
 		}
-		return (6);
+		return (count);
 	}
 
 	if (*str == '\0')
@@ -56,12 +56,23 @@ int print_rot(va_list args)
  * print_rev - print a string in reverse
  * @args: the string to print in reverse
  *
- * Return: the number of character print
+ * Return: the number of characters printed
  */
 int print_rev(va_list args)
 {
-	int c = 0, count = 0;
+	int c = 0, y = 0, count = 0;
+	char *nul = "(null)";
 	char *arg = va_arg(args, char*);
+
+	if (arg == NULL)
+	{
+		while (nul[y])
+		{
+			count += _putchar(nul[y]);
+			y++;
+		}
+		return (count);
+	}
 
 	if (*arg == '\0')
 	{

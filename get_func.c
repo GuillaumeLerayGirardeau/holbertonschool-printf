@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_c - this function is about print a character
+ * print_c - this function prints a character
  * @args: the argument to print
  *
- * this function is call when a character specifier is identify by the function
- * check_structure.
- * Return: the amont of character print
+ * this function is call when a character specifier is identified by
+ * the function check_structure.
+ * Return: the amont of characters printed
  */
 
 int print_c(va_list args)
@@ -18,12 +18,12 @@ int print_c(va_list args)
 }
 
 /**
- * print_s - this function is about print a string
+ * print_s - this function prints a string
  * @args: the argument to print
  *
- * this function is call when a character specifier is identify by the function
- * check_structure.
- * Return: the amont of character print
+ * this function is call when a character specifier is identified by
+ * the function check_structure.
+ * Return: the amont of characters printed
  */
 
 int print_s(va_list args)
@@ -39,10 +39,10 @@ int print_s(va_list args)
 	{
 		while (nul[a])
 		{
-			_putchar(nul[a]);
+			count += _putchar(nul[a]);
 			a++;
 		}
-		return (6);
+		return (count);
 	}
 
 	if (*arg == '\0')
@@ -60,12 +60,12 @@ int print_s(va_list args)
 }
 
 /**
- * print_di - this function is about print numbers
+ * print_di - this function prints numbers
  * @args: the argument to print
  *
- * this function is call when a digit or an integer specifier is identify
+ * this function is call when a digit or an integer specifier is identified
  * by the function check_structure.
- * Return: the amont of character print
+ * Return: the amont of characters printed
  */
 
 int print_di(va_list args)
@@ -107,14 +107,14 @@ int print_di(va_list args)
 
 /**
  * check_structure - this function identify the conversion specifier and call
- * the function assiciate to print an argument
+ * the function associated to print an argument
  * @args: the argument to print
  * @format: the string of argument
  * @i: the emplacement of the convertion specifier to identify
  *
  * this function call a function when it identify the convertion
- * specifier associate.
- * Return: the amont of character print
+ * specifier associated.
+ * Return: the amont of characters printed
  */
 
 int check_structure(const char *format, int i, va_list args)
