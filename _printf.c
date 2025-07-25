@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _printf - this function produce output according to a format.
+ * _printf - this function produces output according to a format.
  * @format: the format to produce output according to
  *
- * this function use convertion specifier to add variable
+ * this function uses convertion specifier to add variable
  * in the string to print (%d, %s, ...) a function call is used to identify
- * the correct specifier. The fonction call another function associated
+ * the correct specifier. The fonction calls another function associated
  * to the specifier that will print in the correct format.
  * Return: the amount of characters printed
  */
