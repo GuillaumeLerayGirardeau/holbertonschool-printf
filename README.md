@@ -32,7 +32,7 @@ _printf("Hello, my name is %s and %c am %d years old", "John", 'I', 50);
 
 Hello, my name is John and I am 50 years old
 ```
-*In this example, %s, %c %d will looks respectively for a string, a character and a digit in the arguments, and will print them in their place.*
+*In this example, %s, %c and %d will look respectively for a string, a character and a digit in the arguments and will print them.*
 
 - **Print a sentence with %**
 
