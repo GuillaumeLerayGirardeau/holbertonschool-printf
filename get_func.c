@@ -73,7 +73,7 @@ int print_di(va_list args)
 	int count = 0;
 	long number = va_arg(args, int);
 	long modulo = 10;
-	long a, c;
+	long print_num, cp_num;
 
 	if (number < 0)
 	{
@@ -85,7 +85,8 @@ int print_di(va_list args)
 	{
 		count += _putchar(number + '0');
 	}
-	c = number;
+
+	cp_num = number;
 
 	if (number > 9)
 	{
@@ -95,9 +96,9 @@ int print_di(va_list args)
 		}
 		while (modulo >= 1)
 		{
-			a = c / modulo;
-			count += _putchar(a + '0');
-			c %= modulo;
+			print_num = cp_num / modulo;
+			count += _putchar(print_num + '0');
+			cp_num %= modulo;
 			modulo /= 10;
 		}
 	}
